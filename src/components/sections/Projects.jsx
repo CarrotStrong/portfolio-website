@@ -92,7 +92,7 @@ const ProjectCard = ({ project, isEven }) => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 ">
+      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
         
         <div 
           onClick={openModal}
@@ -162,7 +162,7 @@ const ProjectCard = ({ project, isEven }) => {
           ref={modalRef} 
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-100 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
           onClick={closeModal}
         >
           <button 
@@ -216,17 +216,45 @@ const ProjectCard = ({ project, isEven }) => {
   );
 };
 
-export default function Projects() {
-  return (
-    <section className="px-8 md:px-32 py-24 flex flex-col gap-24 max-w-7xl mx-auto">
-      <div className="flex items-center gap-4 mb-4">
-        <h3 className="text-3xl md:text-4xl font-bold text-appText transition-colors duration-300">Wybrane projekty</h3>
-        <div className="h-px bg-appBorderStrong flex-1 mt-2 transition-colors duration-300"></div>
-      </div>
+// Dodaliśmy parametr 'theme'
+export default function Projects({ theme }) {
+  // Dynamiczny kolor wzoru z fffuel
+  const patternColor = theme === 'dark' ? '%23ffffff' : '%23000000';
+  const patternSvg = `data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18h-2v4h2v-4zm0 0v-2h2v2h-2zm0 0v2h-2v-2h2zm0 0h2v-2h-2v2zM0 0h2v2H0V0zm0 38h2v2H0v-2zm38 0h2v2h-2v-2zm0-38h2v2h-2V0z' fill='${patternColor}' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E`;
 
-      {projects.map((project, index) => (
-        <ProjectCard key={project.id} project={project} isEven={index % 2 !== 0} />
-      ))}
+  return (
+    // Dodane relative i overflow-hidden
+    <section className="relative px-8 md:px-32 py-24 flex flex-col gap-24 max-w-7xl mx-auto overflow-hidden">
+      
+      {/* TŁO Z TEKSTURĄ (fffuel) */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.04] transition-opacity duration-700 pointer-events-none"
+        style={{
+          backgroundImage: `url("${patternSvg}")`,
+          backgroundSize: '40px 40px',
+          // Maskowanie krawędzi, aby wzór nie urywał się nagle
+          maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+        }}
+      ></div>
+
+      {/* Kontener podbijający właściwe elementy nad tło z patternem */}
+      <div className="relative z-10 flex flex-col gap-24 w-full">
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-appText transition-colors duration-300">Wybrane projekty</h3>
+            <div className="h-px bg-appBorderStrong flex-1 mt-2 transition-colors duration-300"></div>
+          </div>
+          
+          <p className="text-appMuted text-sm md:text-base leading-relaxed italic transition-colors duration-300 max-w-4xl">
+            *Ze względu na charakter komercyjny niektórych projektów, wersje demonstracyjne zostały zanonimizowane i pozbawione elementów wewnętrznych (API, oryginalnej logiki backendowej, danych produkcyjnych oraz identyfikacji wizualnej klientów).
+          </p>
+        </div>
+
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} isEven={index % 2 !== 0} />
+        ))}
+      </div>
     </section>
   );
 }

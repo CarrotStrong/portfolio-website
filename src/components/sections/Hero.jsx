@@ -1,10 +1,8 @@
 import React from 'react';
-import profileImage from '../../assets/images/foto.png';
-import profileImage2 from '../../assets/images/foto3.png';
+import profileImage from '../../assets/images/foto.PNG';
+import profileImage2 from '../../assets/images/foto3.PNG';
 
 export default function Hero({ theme }) {
-  // Dynamiczny kolor dla wbudowanego wzoru z fffuel
-  // kodowanie URL: %23 to symbol '#'
   const patternColor = theme === 'dark' ? '%23ffffff' : '%23000000';
   
   const patternSvg = `data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18h-2v4h2v-4zm0 0v-2h2v2h-2zm0 0v2h-2v-2h2zm0 0h2v-2h-2v2zM0 0h2v2H0V0zm0 38h2v2H0v-2zm38 0h2v2h-2v-2zm0-38h2v2h-2V0z' fill='${patternColor}' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E`;

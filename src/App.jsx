@@ -3,6 +3,8 @@ import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import TechCarousel from './components/sections/TechStackCarousel';
 import Projects from './components/sections/Projects';
+import Footer from './components/layout/Footer';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,8 +29,10 @@ export default function App() {
       <main>
         <Hero theme={theme} />
         <TechCarousel />
-        <Projects />
+        <Projects theme={theme} />
       </main>
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 }
