@@ -1,5 +1,5 @@
-import profileImage from '../../assets/images/foto.png';
-import profileImage2 from '../../assets/images/foto3.png';
+import profileImage from '@/assets/images/foto.png';
+import profileImage2 from '@/assets/images/foto3.png';
 
 export default function Hero({ theme }) {
   return (
@@ -17,12 +17,24 @@ export default function Hero({ theme }) {
         </p>
       </div>
       
-      <div className="w-56 h-56 md:w-80 md:h-80 rounded-full shadow-2xl border-4 border-appCardElevated flex items-center justify-center overflow-hidden bg-appCardElevated shrink-0 relative transition-colors duration-0 group">
+      <div className="w-56 h-56 md:w-80 md:h-80 rounded-full shadow-2xl border-4 border-appCardElevated flex items-center justify-center overflow-hidden bg-appCardElevated shrink-0 relative transition-colors duration-300 group">
+        
         <img 
-          src={theme === 'dark' ? profileImage : profileImage2} 
+          src={profileImage} 
           alt="Bartosz Socha" 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 ${
+            theme === 'dark' ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
         />
+
+        <img 
+          src={profileImage2} 
+          alt="Bartosz Socha" 
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 ${
+            theme === 'light' ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
+        />
+        
       </div>
     </section>
   );

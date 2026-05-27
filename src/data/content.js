@@ -1,3 +1,11 @@
+import wystawka from "@/assets/images/image.jpg";
+import systemObiadowy from "@/assets/images/system-obiadowy.png";
+import lcu1 from "@/assets/images/lcu-1.png";
+import lcu3 from "@/assets/images/lcu-3.png";
+import lcu4 from "@/assets/images/lcu-4.png";
+import lcu5 from "@/assets/images/lcu-5.png";
+import coming from "@/assets/images/coming.png";
+
 const baseTechStack = [
   { 
     name: "React", 
@@ -26,6 +34,10 @@ const baseTechStack = [
   { 
     name: "PostgreSQL", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" 
+  },
+  { 
+    name: "Docker", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" 
   },
   { 
     name: "PHP", 
@@ -61,30 +73,39 @@ export const techStack = [...baseTechStack, ...baseTechStack];
 
 export const projects = [
   {
-    id: 1,
+    id: 0,
     title: "Reserver Hardware IT - Internal Store (Wystawka)",
-    tags: ["React", "TailwindCSS", "Express", "Node.js", "PostgreSQL"],
-    description: "Autorski, pełnoprawny system sprzedaży w firmie. Zapewnia wydajne zarządzanie i responsywny interfejs użytkownika.",
+    tags: ["React", "TailwindCSS", "Express", "Node.js", "PostgreSQL", "Prisma ORM", "Docker", "Keycloak"],
+    description: "Kompleksowa aplikacja Fullstack do zarządzania dystrybucją poleasingowego sprzętu IT wśród pracowników. Wyposażona w rygorystyczny system ról i autoryzacji, zaawansowane filtrowanie, śledzenie historii cyklu życia urządzeń oraz w pełni skonteneryzowane, zautomatyzowane środowisko wdrożeniowe.",
     imageAlt: "Screenshot - Wystawka IT",
     link: "#",
-    image: "/src/assets/images/image.jpg"
+    image: wystawka
+  },
+  {
+    id: 1,
+    title: "System obiadowy",
+    tags: ["PHP", "JavaScript", "Tailwind CSS"],
+    description: "Zautomatyzowany system do obsługi zamówień. Zawiera dwa tryby wyświetlania: 1. Monitory dotykowe (Możliwość scrollowania tabeli, ręcznego odświeżenia, rozwinięcia inicjałów). 2. TV (Automatycznie scrollowana tabela). Poniższe demo obejmuje jedynie wyświetlanie zamówień i wydarzeń.",
+    imageAlt: "Screenshot - System obiadowy",
+    link: "https://carrotstrong.github.io/dinner-system/tv.html",
+    image: systemObiadowy
   },
   {
     id: 2,
-    title: "System obiadowy",
-    tags: ["PHP", "JavaScript", "Tailwind CSS"],
-    description: "Zautomatyzowany system do obsługi zamówień. Poniższe demo obejmuje jedynie wyświetlanie zamówień i wydarzeń.",
-    imageAlt: "Screenshot - System obiadowy",
-    link: "https://carrotstrong.github.io/dinner-system/",
-    image: "/src/assets/images/system-obiadowy.png"
+    title: "Monolith - LCU Engine",
+    tags: ["React", "Tailwind CSS", "Express", "Node.js", "LCU RIOT API"],
+    description: "Nowoczesny klient i narzędzie analityczne dla League of Legends zintegrowane bezpośrednio z API gry. Oferuje zaawansowane zarządzanie Warsztatem Hextech, autorski widget społecznościowy z czatem oraz moduły automatyzacji (Auto-Akcept, Insta-lock). *Wymaga uruchomionego League of Legends Client do działania.",
+    imageAlt: "Screenshot- Monolith - LCU Engine",
+    images: [
+      lcu1, lcu3, lcu4, lcu5
+    ]
   },
   {
     id: 3,
     title: "Coming Soon...",
     tags: ["NextJS", "React", "TypeScript", "Tailwind CSS", "Strapi"],
-    description: "Projekt w trakcie.",
+    description: "Projekt w trakcie budowy.",
     imageAlt: "Screenshot - Coming Soon",
-    link: "#",
-    image: "/src/assets/images/image.jpg"
+    image: coming
   }
 ];

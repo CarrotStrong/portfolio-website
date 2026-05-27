@@ -1,8 +1,8 @@
-import { techStack } from '../../data/content';
+import { techStack } from '@/data/content';
 
 export default function TechStackCarousel() {
   return (
-    <section className="w-full bg-appBg border-y border-appBorderStrong py-12 overflow-hidden shadow-sm relative transition-colors duration-300">
+    <section className="w-full bg-appBg border-y border-appBorderStrong py-12 overflow-hidden shadow-sm relative">
       
       <style>{`
         @keyframes marquee {
@@ -14,8 +14,8 @@ export default function TechStackCarousel() {
         }
       `}</style>
 
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-appBg to-transparent z-10 pointer-events-none transition-colors duration-300"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-appBg to-transparent z-10 pointer-events-none transition-colors duration-300"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-appBg to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-appBg to-transparent z-10 pointer-events-none"></div>
       
       <div className="flex w-max group">
         
