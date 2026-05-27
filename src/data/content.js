@@ -77,5 +77,14 @@ export const projects = [
     imageAlt: "Screenshot - System obiadowy",
     link: "https://carrotstrong.github.io/dinner-system/",
     image: "/src/assets/images/system-obiadowy.png"
+  },
+  {
+    id: 3,
+    title: "Coming Soon...",
+    tags: ["NextJS", "React", "TypeScript", "Tailwind CSS", "Strapi"],
+    description: "Projekt w trakcie.",
+    imageAlt: "Screenshot - Coming Soon",
+    link: "#",
+    image: "/src/assets/images/image.jpg"
   }
 ];

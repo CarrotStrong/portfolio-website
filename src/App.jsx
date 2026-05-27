@@ -25,7 +25,7 @@ export default function App() {
     <div className="flex flex-col">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
-        <Hero />
+        <Hero theme={theme} />
         <TechCarousel />
         <Projects />
       </main>

@@ -32,7 +32,7 @@ export default function Projects() {
               
               <div className="flex gap-2 flex-wrap">
                 {project.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="px-3 py-1 text-xs font-bold bg-brand-surface text-brand-dark rounded-full">
+                  <span key={tagIndex} className="px-3 py-1 text-xs font-bold bg-brand-dark text-brand-surface rounded-full">
                     {tag}
                   </span>
                 ))}

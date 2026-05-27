@@ -10,7 +10,7 @@ export default function TechStackCarousel() {
           100% { transform: translateX(-100%); }
         }
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 100s linear infinite;
         }
       `}</style>
 

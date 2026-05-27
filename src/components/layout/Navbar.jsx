@@ -1,3 +1,5 @@
+import Syby from "../../assets/Socha Bartosz.pdf";
+
 export default function Navbar({ theme, toggleTheme }) {
   return (
     <nav className="flex justify-between items-center py-4 px-8 md:px-16 bg-appBg/80 backdrop-blur-md sticky top-0 z-50 border-b border-appBorderStrong shadow-sm transition-colors duration-300">
@@ -24,7 +26,7 @@ export default function Navbar({ theme, toggleTheme }) {
         </button>
 
         <a 
-          href="/cv-bartosz-socha.pdf" 
+          href={Syby}
           download
           className="text-sm md:text-base font-medium bg-brand-primary text-white px-6 py-2.5 rounded-2xl hover:bg-brand-dark shadow-md hover:shadow-lg inline-block transition-all duration-300  hover:scale-105 active:scale-95"
         >
