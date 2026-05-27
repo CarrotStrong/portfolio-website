@@ -1,5 +1,5 @@
-import profileImage from '@/assets/images/foto.png';
-import profileImage2 from '@/assets/images/foto3.png';
+import profileImage from '@/assets/images/foto.PNG';
+import profileImage2 from '@/assets/images/foto3.PNG';
 
 export default function Hero({ theme }) {
   return (
