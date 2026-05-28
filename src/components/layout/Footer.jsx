@@ -9,8 +9,8 @@ export default function Footer() {
           <span className="text-2xl font-bold tracking-tight text-appText transition-colors duration-300">
             BartoszSocha<span className="text-brand-primary">.pl</span>
           </span>
-          <p className="text-appMuted text-sm md:text-base max-w-sm transition-colors duration-300">
-            Projektowanie, architektura i wdrażanie aplikacji webowych. Rozwijane w Krakowie.
+          <p className="text-appMuted text-sm md:text-base max-w-md transition-colors duration-300">
+            Projektowanie, architektura i wdrażanie aplikacji webowych. <br></br> Rozwijane w Krakowie.
           </p>
         </div>
 
