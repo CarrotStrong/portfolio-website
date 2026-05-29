@@ -1,4 +1,6 @@
-import wystawka from "@/assets/images/image.jpg";
+import ithardware from "@/assets/images/it-hardware.png";
+import ithardware2 from "@/assets/images/it-hardware-2.png";
+import ithardware3 from "@/assets/images/it-hardware-3.png";
 import systemObiadowy from "@/assets/images/system-obiadowy.png";
 import lcu1 from "@/assets/images/lcu-1.png";
 import lcu3 from "@/assets/images/lcu-3.png";
@@ -78,8 +80,10 @@ export const projects = [
     tags: ["React", "TailwindCSS", "Express", "Node.js", "PostgreSQL", "Prisma ORM", "Docker", "Keycloak"],
     description: "Kompleksowa aplikacja Fullstack do zarządzania dystrybucją poleasingowego sprzętu IT wśród pracowników. Wyposażona w rygorystyczny system ról i autoryzacji, zaawansowane filtrowanie, śledzenie historii cyklu życia urządzeń oraz w pełni skonteneryzowane, zautomatyzowane środowisko wdrożeniowe.",
     imageAlt: "Screenshot - Wystawka IT",
-    link: "#",
-    image: wystawka
+    link: "https://it-hardware-frontend.vercel.app/",
+    images: [
+      ithardware, ithardware2, ithardware3 
+    ]
   },
   {
     id: 1,

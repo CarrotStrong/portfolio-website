@@ -162,7 +162,7 @@ const ProjectCard = ({ project, isEven }) => {
           ref={modalRef} 
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-[500] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
           onClick={closeModal}
         >
           <button 
